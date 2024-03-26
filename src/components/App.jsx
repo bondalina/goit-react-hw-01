@@ -1,22 +1,46 @@
-// src/App.jsx
+import MailBox from './MailBox';
+import ProductCard from './ProductCard';
+const productData = [
+  {
+    id: '1_product',
+    title: 'Taco X',
+    price: 4.5,
+    hasDiscount: true,
+    description: 'Fhjhvkjfd kfhf irghi khghg jfhg ug urggljsglj jhgjfhgk.',
+  },
+  {
+    id: '2_product',
+    title: 'Taco Large',
+    price: 6.5,
+    hasDiscount: false,
+    description: 'Fhjhvkjfd kfhf irghi khghg jfhg ug urggljsglj jhgjfhgk.',
+  },
+  {
+    id: '3_product',
+    title: 'Taco Small',
+    price: 3.5,
+    hasDiscount: false,
+    description: 'Fhjhvkjfd kfhf irghi khghg jfhg ug urggljsglj jhgjfhgk.',
+  },
+];
 
-const Product = () => {
+function App() {
   return (
     <div>
-      <h2>Cookies</h2>
-      <p>Price: 999 credits</p>
-    </div>
-  );
-};
-
-export default function App() {
-  return (
-    <div>
-      <h1>Products</h1>
-
-      <Product />
-      <Product />
-      <Product />
+      <MailBox />
+      {productData.map(item => {
+        return (
+          <ProductCard
+            key={item.id}
+            title={item.title}
+            price={item.price}
+            hasDiscount={true}
+            description={item.description}
+          />
+        );
+      })}
     </div>
   );
 }
+
+export default App;
