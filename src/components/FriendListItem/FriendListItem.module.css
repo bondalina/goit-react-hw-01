@@ -1,0 +1,23 @@
+.friendItem {
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+.friendImg {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100px;
+}
+.friendName {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.isOnline {
+  color: green;
+}
+.isOffLine {
+  color: orangered;
+}

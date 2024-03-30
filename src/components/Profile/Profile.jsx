@@ -11,7 +11,7 @@ const Profile = ({
       <div>
         <img className={css.userImg} src={image} alt="Profile" />
         <p className={css.userName}>{name}</p>
-        <p className={css.userDescription}>{tag}</p>
+        <p className={css.userDescription}>@{tag}</p>
         <p className={css.userDescription}>{location}</p>
       </div>
       <ul className={css.statsList}>
